@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RENU DESIGN CHOICE - Premium Bags, Rugs & Sarees</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <h1 class="business-name">RENU DESIGN CHOICE</h1>
+                <p class="tagline">Your Premium Destination for Bags, Rugs & Sarees</p>
+            </div>
+            
+            <!-- Cart Icon -->
+            <div class="cart-icon" id="cartIcon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard Navigation -->
+    <nav class="dashboard">
+        <ul class="dashboard-menu">
+            <li class="dashboard-item">
+                <a href="#" class="dashboard-link active">Home</a>
+            </li>
+            <li class="dashboard-item">
+                <a href="#" class="dashboard-link">Products</a>
+            </li>
+            <li class="dashboard-item">
+                <a href="#" class="dashboard-link">About</a>
+            </li>
+            <li class="dashboard-item">
+                <a href="#" class="dashboard-link">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Discover Your Style</h2>
+            <p>Explore our latest collection of designer bags, premium rugs, and elegant sarees</p>
+            <a href="#" class="hero-btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Shopping Cart</h3>
+            <button class="close-cart" id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">Rs. 0</span>
+            </div>
+            <button class="order-now-btn" id="orderNowBtn">
+                <i class="fab fa-whatsapp"></i> Order Now on WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <h2 class="section-title">Our Premium Collection</h2>
+        
+        <!-- Category Filters -->
+        <div class="category-filters">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="bags">Bags</button>
+            <button class="filter-btn" data-category="rugs">Rugs</button>
+            <button class="filter-btn" data-category="sarees">Sarees</button>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="productsGrid">
+            <!-- Bags -->
+            <div class="product-card" data-category="bags" data-id="1" data-name="Insults bag" data-price="800" data-image="bag1.png">
+                <div class="product-badge">New</div>
+                <div class="product-image-container">
+                    <img src="bag1.png" alt="Premium Insults Bag" class="product-image" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Premium Insults Bag</h3>
+                    <p class="product-category">Bags</p>
+                    <p class="product-price">Rs. 800</p>
+                    <p class="product-description">Genuine handbag with multiple compartments</p>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Rugs -->
+            <div class="product-card" data-category="rugs" data-id="2" data-name="Silk rug" data-price="400" data-image="rug1.png">
+                <div class="product-badge">Sale</div>
+                <div class="product-image-container">
+                    <img src="rug1.png" alt="Silk Rug" class="product-image" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Handwoven Wool Rug</h3>
+                    <p class="product-category">Rugs</p>
+                    <p class="product-price">Rs. 400</p>
+                    <p class="product-description">Premium quality silk rug (5x7 ft)</p>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="rugs" data-id="3" data-name="Thick cloth rug" data-price="400" data-image="rug2.png">
+                <div class="product-image-container">
+                    <img src="rug2.png" alt="Thick cloth rug" class="product-image" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Thick Cloth Rug</h3>
+                    <p class="product-category">Rugs</p>
+                    <p class="product-price">Rs. 400</p>
+                    <p class="product-description">Contemporary design rug for modern homes</p>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="rugs" data-id="4" data-name="Traditional Persian Rug" data-price="500" data-image="rug3.png">
+                <div class="product-image-container">
+                    <img src="rug3.png" alt="Traditional Persian Rug" class="product-image" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Traditional Persian Rug</h3>
+                    <p class="product-category">Rugs</p>
+                    <p class="product-price">Rs. 500</p>
+                    <p class="product-description">Traditional design rug for elegant homes</p>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sarees -->
+            <div class="product-card" data-category="sarees" data-id="5" data-name="Peacock saree design" data-price="4500" data-image="saree.png">
+                <div class="product-badge">Premium</div>
+                <div class="product-image-container">
+                    <img src="saree.png" alt="Peacock saree design" class="product-image" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Peacock Saree Design</h3>
+                    <p class="product-category">Sarees</p>
+                    <p class="product-price">Rs. 4500</p>
+                    <p class="product-description">Authentic peacock saree with zari work</p>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>About RENU DESIGN CHOICE</h2>
+                <p>Welcome to RENU DESIGN CHOICE, your premier destination for high-quality bags, rugs, and sarees. We curate the finest collections that blend traditional craftsmanship with contemporary design.</p>
+                <p>Our mission is to provide our customers with exceptional products that enhance their lifestyle and celebrate their unique style. Each product in our collection is carefully selected to ensure the highest quality and authenticity.</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-truck"></i>
+                        <span>Free Delivery</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Quality Guaranteed</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-undo-alt"></i>
+                        <span>Easy Returns</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Call Us</h4>
+                        <p>+94 75 425 2367</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Visit Us</h4>
+                        <p>Hatharaliyadda, Sri Lanka</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- WhatsApp Contact Button -->
+            <div class="whatsapp-contact">
+                <a href="https://wa.me/94760218766?text=Hello%20RENU%20DESIGN%20CHOICE%2C%20I'm%20interested%20in%20your%20products" class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>RENU DESIGN CHOICE</h3>
+                <p>Your trusted partner for premium bags, rugs, and sarees since 2020.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://web.facebook.com/profile.php?id=61587549470970" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/94760218766" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 RENU DESIGN CHOICE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
