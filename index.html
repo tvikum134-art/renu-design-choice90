@@ -6,6 +6,33 @@
     <title>RENU DESIGN CHOICE - Premium Bags, Rugs & Sarees</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles for all product images to maintain consistency */
+        .product-card .product-image-container {
+            height: 350px;
+            overflow: hidden;
+            position: relative;
+            background: #F5F5F5;
+        }
+        
+        .product-card .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-image {
+            transform: scale(1.08);
+        }
+        
+        /* Ensure all categories have same image size */
+        .product-card[data-category="bags"] .product-image-container,
+        .product-card[data-category="rugs"] .product-image-container,
+        .product-card[data-category="sarees"] .product-image-container {
+            height: 350px;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -85,17 +112,65 @@
 
         <!-- Products Grid -->
         <div class="products-grid" id="productsGrid">
-            <!-- Bags -->
-            <div class="product-card" data-category="bags" data-id="1" data-name="Insults bag" data-price="800" data-image="bag1.png">
+            <!-- Bags - All with consistent image sizes -->
+            <div class="product-card" data-category="bags" data-id="1" data-name="Premium Leather Bag" data-price="800" data-image="bag1.png">
                 <div class="product-badge">New</div>
                 <div class="product-image-container">
-                    <img src="bag1.png" alt="Premium Insults Bag" class="product-image" loading="lazy">
+                    <img src="bag1.png" alt="Premium Leather Bag" class="product-image" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <h3>Premium Insults Bag</h3>
+                    <h3>Premium Leather Bag</h3>
                     <p class="product-category">Bags</p>
                     <p class="product-price">Rs. 800</p>
-                    <p class="product-description">Genuine handbag with multiple compartments</p>
+                    <p class="product-description">Genuine leather handbag with multiple compartments</p>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="bags" data-id="9" data-name="Designer Tote Bag" data-price="950" data-image="bag2.png">
+                <div class="product-badge">out of stock</div>
+                <div class="product-image-container">
+                    <img src="bag2.jpg" alt="Designer Tote Bag" class="product-image" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Designer Tote Bag</h3>
+                    <p class="product-category">Bags</p>
+                    <p class="product-price">Rs. 950</p>
+                    <p class="product-description">Spacious designer tote bag for everyday use</p>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="bags" data-id="10" data-name="Evening Clutch" data-price="650" data-image="bag3.png">
+                <div class="product-badge">out of stock</div>
+                <div class="product-image-container">
+                    <img src="bag3.jpg" alt="Evening Clutch" class="product-image" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Evening Clutch</h3>
+                    <p class="product-category">Bags</p>
+                    <p class="product-price">Rs. 650</p>
+                    <p class="product-description">Elegant evening clutch for special occasions</p>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="bags" data-id="11" data-name="Travel Backpack" data-price="1200" data-image="bag4.png">
+                <div class="product-badge">out of stock</div>
+                <div class="product-image-container">
+                    <img src="bag4.jfif" alt="Travel Backpack" class="product-image" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Travel Backpack</h3>
+                    <p class="product-category">Bags</p>
+                    <p class="product-price">Rs. 1200</p>
+                    <p class="product-description">Durable travel backpack with USB charging port</p>
                     <button class="add-to-cart-btn">
                         <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
@@ -103,28 +178,28 @@
             </div>
 
             <!-- Rugs -->
-            <div class="product-card" data-category="rugs" data-id="2" data-name="Silk rug" data-price="400" data-image="rug1.png">
+            <div class="product-card" data-category="rugs" data-id="2" data-name="Handwoven Wool Rug" data-price="400" data-image="rug1.png">
                 <div class="product-badge">Sale</div>
                 <div class="product-image-container">
-                    <img src="rug1.png" alt="Silk Rug" class="product-image" loading="lazy">
+                    <img src="rug1.png" alt="Handwoven Wool Rug" class="product-image" loading="lazy">
                 </div>
                 <div class="product-info">
                     <h3>Handwoven Wool Rug</h3>
                     <p class="product-category">Rugs</p>
                     <p class="product-price">Rs. 400</p>
-                    <p class="product-description">Premium quality silk rug (5x7 ft)</p>
+                    <p class="product-description">Premium quality wool rug (5x7 ft)</p>
                     <button class="add-to-cart-btn">
                         <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                 </div>
             </div>
 
-            <div class="product-card" data-category="rugs" data-id="3" data-name="Thick cloth rug" data-price="400" data-image="rug2.png">
+            <div class="product-card" data-category="rugs" data-id="3" data-name="Contemporary Design Rug" data-price="400" data-image="rug2.png">
                 <div class="product-image-container">
-                    <img src="rug2.png" alt="Thick cloth rug" class="product-image" loading="lazy">
+                    <img src="rug2.png" alt="Contemporary Design Rug" class="product-image" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <h3>Thick Cloth Rug</h3>
+                    <h3>Contemporary Design Rug</h3>
                     <p class="product-category">Rugs</p>
                     <p class="product-price">Rs. 400</p>
                     <p class="product-description">Contemporary design rug for modern homes</p>
@@ -149,17 +224,65 @@
                 </div>
             </div>
 
-            <!-- Sarees -->
-            <div class="product-card" data-category="sarees" data-id="5" data-name="Peacock saree design" data-price="4500" data-image="saree.png">
+            <!-- Sarees - All with consistent image sizes like rugs -->
+            <div class="product-card" data-category="sarees" data-id="5" data-name="Peacock Design Saree" data-price="4500" data-image="saree.png">
                 <div class="product-badge">Premium</div>
                 <div class="product-image-container">
-                    <img src="saree.png" alt="Peacock saree design" class="product-image" loading="lazy">
+                    <img src="saree.png" alt="Peacock Design Saree" class="product-image" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <h3>Peacock Saree Design</h3>
+                    <h3>Peacock Design Saree</h3>
                     <p class="product-category">Sarees</p>
                     <p class="product-price">Rs. 4500</p>
-                    <p class="product-description">Authentic peacock saree with zari work</p>
+                    <p class="product-description">Authentic peacock design saree with zari work</p>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="sarees" data-id="6" data-name="Premium Silk Saree" data-price="4500" data-image="saree2.png">
+                <div class="product-badge">New</div>
+                <div class="product-image-container">
+                    <img src="saree2.png" alt="Premium Silk Saree" class="product-image" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Premium Silk Saree</h3>
+                    <p class="product-category">Sarees</p>
+                    <p class="product-price">Rs. 4500</p>
+                    <p class="product-description">Genuine silk saree with traditional patterns</p>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="sarees" data-id="7" data-name="Designer Party Wear Saree" data-price="4500" data-image="saree3.png">
+                <div class="product-badge">New</div>
+                <div class="product-image-container">
+                    <img src="saree3.png" alt="Designer Party Wear Saree" class="product-image" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Designer Party Wear Saree</h3>
+                    <p class="product-category">Sarees</p>
+                    <p class="product-price">Rs. 4500</p>
+                    <p class="product-description">Elegant designer saree for special occasions</p>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="sarees" data-id="8" data-name="Traditional Wedding Saree" data-price="4500" data-image="saree4.png">
+                <div class="product-badge">Premium</div>
+                <div class="product-image-container">
+                    <img src="saree4.png" alt="Traditional Wedding Saree" class="product-image" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Traditional Wedding Saree</h3>
+                    <p class="product-category">Sarees</p>
+                    <p class="product-price">Rs. 4500</p>
+                    <p class="product-description">Beautiful wedding saree with intricate designs</p>
                     <button class="add-to-cart-btn">
                         <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
